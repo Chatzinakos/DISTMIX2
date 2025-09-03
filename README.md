@@ -1,16 +1,16 @@
 # DISTMIX2
 
 # Download DISTMIX2
-The current release (Version 0.1.0) of DISTMIX2 is for a Linux user. The pre-compiled executables for other operating systems (e.g.,  Windows, MacOS) will be available soon. The latest source codes of DISTMIX2 are available upon request (chris.chatzinakos@vcuhealth.org). 
+The current release (Version 0.3.0) of DISTMIX2 is for a Linux user. The pre-compiled executables for other operating systems (e.g.,  Windows, MacOS) will be available soon. The latest source codes of DISTMIX2 are available upon request (christos.chatzinakos@downstate.edu). 
 
 |**Direct download link**|**Versiom**|**Release Date**|**Note**|
 |:---|:---|:---|:---|
-|[DISTMIX2 for a Linux user](https://www.dropbox.com/sh/r1q6q2cmg47lukw/AAAPN2Zo6oneOJlHInp404zya?dl=0)|v01.1.0|07/24/2018|Includes info file for several scenarios|
+|[DISTMIX2 for a Linux user](https://www.dropbox.com/scl/fi/ixvh93so5rvmy06ljlxlj/distmix2_v0.0.2?rlkey=0zlxuxxqksmn4k1to4l651nt1&st=81lwlz3p&dl=0|v0.3.0|09/03/2025|Includes info file for several scenarios|
 
 # Download Reference Panels
 |**Direct download link**|**Number of Samples**|**Number of populations**|**NCBI build**|**Release Date**|**Note**|
 |:---|:---|:---|:---|:---|:---|
-|[33Kg](https://www.dropbox.com/sh/sw03zojcwzpdeed/AACucpdpPMlbtVCp9zrwXLATa?dl=0)|32953|29|build 37 (hg19)|Jul. 16 2018|Includes chr1-chr22|
+|[33Kg](https://www.dropbox.com/sh/sw03zojcwzpdeed/AACucpdpPMlbtVCp9zrwXLATa?dl=0)|32953|29|build 37 (hg19)|Sep. 3 2025|Includes chr1-chr22|
 
 Here are the 33Kg population abbreviations used by DISTMIX2. AFR is an abbreviation for African; AMR for admixed American; ASN for East Asian; EUR for European and SAS for South Asian. 
 
@@ -83,16 +83,16 @@ The first line of the super-population weight file should be column names/header
 
 # DISTMIX2 output file format for genes analysis
 
-The DISTMIX2 output file, has nine columns: 1) rsid (SNP ID), 2) chr (chromosome number), 3) bp (base pair position), 4) a1 (reference allele), 5) a2 (alternative allele), 6) Zval (Distimix2 estimated z-value), 7) Pval (Distmix2 estimated p-value), 8) Info (DISTMIX2 estimated information) and 9) W_AF1 (DISTMIX2 estimation of the weighted Allele Frequency weighted information). The first line of the output file is column names/headers.  Here is a sample DISTMIX2 output file, with 3 SNPS:
+The DISTMIX2 output file, has nine columns: 1) rsid (SNP ID), 2) chr (chromosome number), 3) bp (base pair position), 4) a1 (reference allele), 5) a2 (alternative allele), 6) Zval (Distimix2 estimated z-value), 7) Pval (Distmix2 estimated p-value), 8) Info (DISTMIX2 estimated information), 9) W_AF1 (DISTMIX2 estimation of the weighted Allele Frequency weighted information) and IMPUTED_STATUS (Yes if the SNP was imputed; No if it was present in the original GWAS data). The first line of the output file is column names/headers.  Here is a sample DISTMIX2 output file, with 3 SNPS:
 
 ```
-rsid        chr  bp   a1  a2     Zval     Pval    Info     W_AF1    
+rsid        chr  bp   a1  a2     Zval     Pval    Info     W_AF1   IMPUTED_STATUS 
 
-rs2462492   1   54676  T   C  -0.07594   0.9394   0.0375   0.4241   
+rs2462492   1   54676  T   C  -0.07594   0.9394   0.0375   0.4241   YES
 
-rs2462492   1   52326  C   T   1.00863   0.31315  0.0242   0.0091   
+rs2462492   1   52326  C   T   1.00863   0.31315  0.0242   0.0091   NO
 
-rs74447903  1   57033  C   T  -1.04016   0.29826  0.8798   0.2345
+rs74447903  1   57033  C   T  -1.04016   0.29826  0.8798   0.2345   YES
 
 ```
 
